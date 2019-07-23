@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var morgan = require('morgan');
+var path = require('path');
 
 //Configuracion
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2);
+app.set()
 
 //Middleware
 app.use(morgan('dev'));
@@ -13,6 +15,9 @@ app.use(express.json());
 
 //Rutas
 app.use('/api/routes', require('./src/routes'));
+
+//Archivos estaticos
+app.use(express.static(path.join(__dirname, 'src/public')));
 
 app.listen(app.set('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
