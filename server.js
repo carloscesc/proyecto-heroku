@@ -1,12 +1,12 @@
 var express = require('express');
-var app = express();
 var morgan = require('morgan');
 var path = require('path');
 
+var app = express();
+
 //Configuracion
 app.set('port', process.env.PORT || 3000);
-app.set('json spaces', 2);
-app.set()
+/* app.set('json spaces', 2); */
 
 //Middleware
 app.use(morgan('dev'));

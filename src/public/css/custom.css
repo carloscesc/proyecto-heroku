@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-1{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.titulo-1{
+    margin-left: 15px;
+}
+
+.tabla-1{
+    width: 78%;
+    margin-left: 15px;
+    border: solid 3px;
+}
