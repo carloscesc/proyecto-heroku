@@ -15,5 +15,8 @@
 .tabla-1{
     width: 78%;
     margin-left: 15px;
-    border: solid 3px;
+}
+
+#btn-mostrar{
+    margin-left: 608px;
 }
