@@ -6,7 +6,7 @@ var app = express();
 
 //Configuracion
 app.set('port', process.env.PORT || 3000);
-/* app.set('json spaces', 2); */
+app.set('json spaces', 2);
 
 //Middleware
 app.use(morgan('dev'));
@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //Rutas
-app.use('/api/routes', require('./src/routes'));
+app.use('/api/productos', require('./src/routes/productos'));
 
 //Archivos estaticos
 app.use(express.static(path.join(__dirname, 'src/public')));
