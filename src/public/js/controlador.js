@@ -25,4 +25,20 @@ $(document).ready(function(){
             }
         });
     });
+
+    $('#btn-guardar').click(function(){
+        var parametros = `nombre=${$("#txt-producto").val()}`;
+        $.ajax({
+            url: "/api/productos",
+            method: "POST",
+            data: parametros,
+            dataType: 'json',
+            success: function(res){
+                $("#btn-mostrar").click();
+            },
+            error: function(error){
+                console.error(error);
+            }
+        });
+    });
 });
