@@ -17,10 +17,20 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    var { nombre } = req.body;
+    let { nombre } = req.body;
     data.push({
         id: data.length + 1,
         nombre
+    });
+});
+
+router.put('/:id', (req, res) => {
+    let { id } = req.params;
+    let { nombre } = req.body;
+    data.forEach((producto, i) => {
+        if(producto.id == id){
+            producto.nombre = nombre;
+        }
     });
 });
 
